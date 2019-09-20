@@ -30,6 +30,9 @@ https://airtable.com/shrgOF6LuczGdIKtZ/tblcBqfzy6GeTzQJ0/viwYks3CN0Xl2Yd9B/recfx
 Github for the front End where I will be placing this marketing website against my will
 https://github.com/webpt8-buildweek-wunderlist/wunderlist-front-end
 
+Grading rubric for the Build Week project
+https://www.notion.so/Web-UI-developer-620c043a0a484da093d7fda8fcba10b0
+
 Trello Coordinating for this website tasks
 https://trello.com/b/RwJJ9jkN/wunderlist
 ## Starting with basic documentation and design issues

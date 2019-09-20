@@ -1,0 +1,37 @@
+@import "variables";
+
+.loader {
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(2, 3, 8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  &-gif {
+    margin: 7%;
+  }
+
+  &.hidden {
+    -webkit-animation: fadeOut 1s forwards 2s;
+            animation: fadeOut 1s forwards 2s;
+  }
+}
