@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
+import { Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
+
 
 export default function SignUp (){
 
 //Custom Hooks for Sign Up Functionality 
     const useSignUpForm = (cb) => {
-        const [inputs, setInputs] = useState({});
+        const [Inputs, setInputs] = useState({});
 
+        //Preventing the default (page refreshing)
         const handleSubmit = (event) => {
             if (event) {
                 event.preventDefault();
@@ -13,46 +17,49 @@ export default function SignUp (){
             cb();
         }
         
+        //Handling event when user gives Input
         const handleInputChange = (event) => {
             event.persist();
-            setInputs(inputs => ({...inputs, [event.target.name]: event.target.value}));
+            setInputs(Inputs => ({...Inputs, [event.target.name]: event.target.value}));
         }
         return {
             handleSubmit,
             handleInputChange,
-            inputs
+            Inputs
         };
     }
 
 const signup = () => {
     alert (`User Created!
-            Name: ${inputs.firstName} ${inputs.lastName}
-            Email: ${inputs.email}`);
+            Name: ${Inputs.firstName} ${Inputs.lastName}
+            Email: ${Inputs.email}`);
 }
  
-const {inputs, handleInputChange, handleSubmit} = useSignUpForm(signup);
+const {Inputs, handleInputChange, handleSubmit} = useSignUpForm(signup);
 
     return(
-    <form onSubmit={handleSubmit}>
-        <div>
-            <label>First Name</label>
-            <input type="text" name="firstName" onChange={handleInputChange} value={inputs.firstName} required />
-            <label>Last Name</label> 
-            <input type="text" name="lastName" onChange={handleInputChange} value={inputs.lastName} required />
-        </div>
-        <div>
-            <label>Email Address</label>
-            <input type="email" name="email" onChange={handleInputChange} value={inputs.email} required />
-        </div>
-        <div>
-            <label>Password</label>
-            <input type="password" name="password1" onChange={handleInputChange} value={inputs.password1} />
-        </div>
-        <div>
-            <label>Re-enter Password</label>
-            <input type="password" name="password2" onChange={handleInputChange} value={inputs.password2} />
-        </div>
-        <button type="submit">Sign Up</button>
-    </form>
+    <Form onSubmit={handleSubmit}>
+        <FormGroup>
+            <Label for="exampleEmail">First Name</Label>
+            <Input type="text" name="firstName" onChange={handleInputChange} value={Inputs.firstName} required />
+        </FormGroup>
+        <FormGroup>
+            <Label for="exampleEmail">Last Name</Label> 
+            <Input type="text" name="lastName" onChange={handleInputChange} value={Inputs.lastName} required />
+        </FormGroup>
+        <FormGroup>
+            <Label for="exampleEmail">Email Address</Label>
+            <Input type="email" name="email" onChange={handleInputChange} value={Inputs.email} required />
+        </FormGroup>
+        <FormGroup>
+            <Label for="exampleEmail">Password</Label>
+            <Input type="password" name="password1" onChange={handleInputChange} value={Inputs.password1} />
+        </FormGroup>
+        <FormGroup>
+            <Label for="exampleEmail">Re-enter Password</Label>
+            <Input type="password" name="password2" onChange={handleInputChange} value={Inputs.password2} />
+        </FormGroup>
+        <Button color="secondary" type="submit">Sign Up</Button>
+    </Form>
     )
 }
