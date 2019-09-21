@@ -15,17 +15,13 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 8vh;
-  color: @white;
-  background: fade(@black, 80%);
+  min-height: 2vh;
+  color:@black;
+  background:@white;
   z-index: 1000;
 
   .logo a img {
     height: 40px;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    -webkit-animation: slideInRight .5s backwards 2.75s;
-            animation: slideInRight .5s backwards 2.75s;
 
     &:hover {
       -webkit-transform: scale(1.05);
@@ -37,15 +33,14 @@ nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-    width: 30vw;
-    -webkit-animation: slideInLeft .5s ease-out backwards .75s;
-            animation: slideInLeft .5s ease-out backwards .75s;
+    align-self: flex-end;
+    width:40vh;
+    margin-left:150em;
+    padding-left:4em;
+    margin-top:1em;
+    margin-bottom:1em;
 
     @media (max-width: 1000px) {
       width: 40vw;
@@ -83,8 +78,10 @@ nav {
     .link {
       letter-spacing: .1rem;
       text-transform: uppercase;
-      font-size: 1.5rem;
-      padding: 2% 0;
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight:600;
+      padding: 2% 0 0;
       border-bottom: 3px solid transparent;
       border-top: 3px solid transparent;
       -webkit-transition: all .2s ease-in;
@@ -95,7 +92,7 @@ nav {
       }
       
       a {
-        color: @white;
+        color: @black;
         text-decoration: none;
 
         &:not(:last-child):hover {
@@ -105,13 +102,12 @@ nav {
 
       &:not(:last-child):hover {
         border-bottom: 3px solid @green;
-        border-top: 3px solid @green;
       }
     }
 
     .cta {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 7px 15px;
       border: 2px solid @blue;
       border-radius: 15px;
       cursor: pointer;
@@ -181,4 +177,5 @@ nav {
     }
   }
 }
+
 
