@@ -1,0 +1,184 @@
+@import "variables";
+@import "animations";
+
+nav {
+  position: fixed;
+  width: 100%;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 8vh;
+  color: @white;
+  background: fade(@black, 80%);
+  z-index: 1000;
+
+  .logo a img {
+    height: 40px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-animation: slideInRight .5s backwards 2.75s;
+            animation: slideInRight .5s backwards 2.75s;
+
+    &:hover {
+      -webkit-transform: scale(1.05);
+              transform: scale(1.05);
+    }
+  }
+
+  .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 30vw;
+    -webkit-animation: slideInLeft .5s ease-out backwards .75s;
+            animation: slideInLeft .5s ease-out backwards .75s;
+
+    @media (max-width: 1000px) {
+      width: 40vw;
+    }
+
+    @media (max-width: 800px) {
+      position: absolute;
+      right: 0px;
+      top: 8vh;
+      height: 80vh;
+      width: 70%;
+      background: fade(@black, 80%);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);
+      -webkit-transition: -webkit-transform .5s ease-in;
+      transition: -webkit-transform .5s ease-in;
+      transition: transform .5s ease-in;
+      transition: transform .5s ease-in, -webkit-transform .5s ease-in;
+      -webkit-animation: none;
+      animation: none;
+    }
+    
+    .link {
+      letter-spacing: .1rem;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      padding: 2% 0;
+      border-bottom: 3px solid transparent;
+      border-top: 3px solid transparent;
+      -webkit-transition: all .2s ease-in;
+      transition: all .2s ease-in;
+
+      @media (max-width: 800px) {
+        opacity: 0;
+      }
+      
+      a {
+        color: @white;
+        text-decoration: none;
+
+        &:not(:last-child):hover {
+          color: @green;
+        }
+      }
+
+      &:not(:last-child):hover {
+        border-bottom: 3px solid @green;
+        border-top: 3px solid @green;
+      }
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 2px solid @blue;
+      border-radius: 15px;
+      cursor: pointer;
+      border-radius: 15px;
+      -webkit-box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .6);
+              box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .6);
+      -webkit-transition: all .2s ease-in;
+      transition: all .2s ease-in;
+  
+      &:hover {
+        background: @green;
+        color: @black;
+        -webkit-transform: translateY(-3px) scale(1.01);
+                transform: translateY(-3px) scale(1.01);
+        -webkit-box-shadow: 0 1.2rem 2.2rem rgba(0, 0, 0, .5);
+                box-shadow: 0 1.2rem 2.2rem rgba(0, 0, 0, .5);
+      }
+
+      &:active {
+        -webkit-transform: translateY(-1px) scale(1);
+                transform: translateY(-1px) scale(1);
+      }
+    }
+  }
+  
+  .nav-active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+
+  .burger {
+    display: none;
+
+    @media (max-width: 800px) {
+      display: block;
+      cursor: pointer;
+      -webkit-animation: slideInLeft .5s ease-out backwards 3s;
+      animation: slideInLeft .5s ease-out backwards 3s;
+    }
+
+    div {
+      width: 25px;
+      height: 3px;
+      background: @white;
+      margin: 5px;
+      -webkit-transition: all .2s ease;
+      transition: all .2s ease;
+    }
+  }
+
+  .toggle {
+    .line1 {
+      -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+              transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .line2 {
+      opacity: 0;
+    }
+
+    .line3 {
+      -webkit-transform: rotate(45deg) translate(-5px, -6px);
+              transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+}
+
