@@ -306,6 +306,11 @@ nav {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
+.nav .logotext {
+  font-size: 3rem;
+  text-decoration: none;
+  color: #dce2ed;
+}
 .nav .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
