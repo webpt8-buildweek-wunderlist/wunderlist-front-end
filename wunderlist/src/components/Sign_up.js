@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
-import { Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
 
 
 export default function SignUp (){
