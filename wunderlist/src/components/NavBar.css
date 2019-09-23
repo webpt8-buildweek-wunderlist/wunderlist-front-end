@@ -1,0 +1,17 @@
+.NavBarSegment{
+    width: 100%;
+    background-color: #282c34;
+}
+
+.NavBarMenu{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.MenuItem{
+    color: Lavender !important;
+}
