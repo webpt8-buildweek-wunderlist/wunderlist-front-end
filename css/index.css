@@ -481,15 +481,13 @@ nav {
   width: 100vw;
   height: 100vh;
   z-index: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 87, 114, 0.35)), color-stop(rgba(26, 133, 176, 0.55)), to(#1a85b0));
-  background: linear-gradient(rgba(17, 87, 114, 0.35), rgba(26, 133, 176, 0.55), #1a85b0);
 }
 .header-content {
   z-index: 2;
   text-shadow: -1px 1px 0 rgba(20, 20, 20, 0.6);
 }
 .header-content h1 {
-  font-size: 7rem;
+  font-size: 5rem;
   font-weight: bold;
   margin-bottom: 3rem;
 }
@@ -556,19 +554,20 @@ nav {
   padding: 5%;
 }
 .section {
-  padding: 40px 0;
+  padding: 10px 0;
   font-size: 1.7rem;
 }
 .section-a {
-  background-color: #1985b0;
+  background-color: #dce2ed;
+  color: #39444e;
 }
 .section-a a:visited {
-  color: #d1d9e9;
+  color: #4d5b6a;
 }
 .section-a1 {
   background-color: #dce2ed;
   margin: 1rem auto;
-  padding: 3rem;
+  padding: 1rem;
   max-width: 960px;
 }
 .section-a1 h2 {
@@ -588,25 +587,9 @@ nav {
 .section p {
   margin-bottom: 1rem;
 }
-.vid-contain {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
-  max-width: 960px;
-}
-.vid-contain iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  max-width: 960px;
-}
 .text-contain {
   margin: 1rem;
   font-size: 2rem;
-  color: #dce2ed;
   line-height: 1.2;
 }
 .text-contain p a {
@@ -697,7 +680,9 @@ nav {
   }
 }
 .cta1 {
-  margin-top: 6rem;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
 }
 footer {
   color: white;
