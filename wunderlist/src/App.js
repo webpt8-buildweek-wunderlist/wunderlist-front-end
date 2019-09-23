@@ -10,8 +10,8 @@ function App() {
     <div className="App">
       <header className="App-header">
        <h1>Wunderlist</h1>
-       <Route exact path='/' component={HomePage} />
-       <Route exact path='/login' component={Login} />
+       {/* <Route exact path='/' component={HomePage} /> */}
+       <Route exact path='/' component={Login} />
        <Route exact path='/signup' component={SignUp} />
       </header>
     </div>
