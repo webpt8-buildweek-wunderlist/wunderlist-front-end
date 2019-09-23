@@ -5,6 +5,7 @@ import Login from './components/Login';
 import './App.css';
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
+import {Route} from "react-router-dom";
 
 function App() {
   return (
