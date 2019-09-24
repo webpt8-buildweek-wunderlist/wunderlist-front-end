@@ -35,11 +35,11 @@ export default class NavBar extends Component {
             />
           </NavLink>
 
-          <NavLink to="/callendar">
+          <NavLink to="/calendar">
             <Menu.Item
               className = "MenuItem"
-              name='callendar'
-              active={activeItem === 'callendar'}
+              name='calendar'
+              active={activeItem === 'calendar'}
               onClick={this.handleItemClick}
             />
           </NavLink>
