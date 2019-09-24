@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar";
 import {Route} from "react-router-dom";
 import Search from "./components/Search";
 import {PrivateRoute} from "./components/PrivateRoute";
+import Calendar from "./components/Calendar";
 
 function App() {
   return (
