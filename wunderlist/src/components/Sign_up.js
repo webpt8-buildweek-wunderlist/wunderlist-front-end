@@ -1,17 +1,23 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import axios from "axios";
 
 
 export default function SignUp (){
 
+
 //Custom Hooks for Sign Up Functionality 
     const useSignUpForm = (cb) => {
+        
         const [Inputs, setInputs] = useState({});
+
+        
 
         //Preventing the default (page refreshing)
         const handleSubmit = (event) => {
             if (event) {
                 event.preventDefault();
+
             }
             cb();
         }

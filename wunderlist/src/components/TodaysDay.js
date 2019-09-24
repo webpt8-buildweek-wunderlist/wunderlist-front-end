@@ -9,11 +9,12 @@ export default function TodaysDay() {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        font-size: 18px;
         padding: 20px;
     `;
 
   var tempDate = new Date();
-  var tempTime = new Date();
+  // var tempTime = new Date();
   var date = (tempDate.getMonth()+1) + '-' + tempDate.getDate() + '-' + tempDate.getFullYear();
   // var time = tempDate.getHours()+':'+ tempDate.getMinutes()+':'+ tempDate.getSeconds();
   const currDate = date;
@@ -21,7 +22,8 @@ export default function TodaysDay() {
   return (
     <WrapperDiv>
       <p>{currDate}</p>
-      <p><Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Central'} /></p>
+      <p><Clock format={'HH:mm:ss'} ticking={true} /></p>
+      {/* <p><Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Central'} /></p> */}
     </WrapperDiv>
   );
 }
