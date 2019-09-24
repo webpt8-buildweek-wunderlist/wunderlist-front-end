@@ -30,14 +30,6 @@ export default function Calendar (){
         );
     };
 
-    const nextMonth = () => {
-        setCurrentDate(dateFns.addMonths(currentDate, 1));
-    }
-
-    const prevMonth = () => {
-        setCurrentDate(dateFns.subMonths(currentDate,1));
-    }
-
     const daysOfWeek = () => {
 
     const dateFormat = "ddd";
@@ -53,6 +45,58 @@ export default function Calendar (){
         }
         return <div className="days row">{days}</div>;
     };
+
+    const cells = () => {
+        
+    const monthStart = dateFns.startOfMonth(currentDate);
+    const monthEnd = dateFns.endOfMonth(monthStart);
+    const startDate = dateFns.startOfWeek(monthStart);
+    const endDate = dateFns.endOfWeek(monthEnd);
+    const dateFormat = "d";
+    const rows = [];
+
+    let days = [];
+    let day = startDate;
+    let formattedDate = "";
+
+    while (day <= endDate) {
+        for (let i = 0; i < 7; i++) {
+            formattedDate = dateFns.format(day, dateFormat);
+            const cloneDay = day;
+
+        days.push(
+            <div className={`column cell ${!dateFns.isSameMonth(day,monthStart)
+            ? "disabled" : dateFns.isSameDay(day, selectedDate)
+            ? "selected" : "" }`}
+            key={day}
+            onClick={() => onDateClick(dateFns.parse(cloneDay))}
+            >
+            <span className="number">{formattedDate}</span>
+            <span className="bg">{formattedDate}</span>
+            </div>
+        );
+        day = dateFns.addDays(day, 1);
+            }
+        
+        rows.push(
+            <div className="row" key={day}>{days}</div>
+            );
+        days=[];
+        }
+    return <div className="body">{rows}</div>;
+    }
+
+    const nextMonth = () => {
+        setCurrentDate(dateFns.addMonths(currentDate, 1));
+    };
+
+    const prevMonth = () => {
+        setCurrentDate(dateFns.subMonths(currentDate, 1));
+    };
+
+    const onDateClick = day => {
+        setSelectedDate(day)
+    }
 
     return(
         <div className="calendar">
