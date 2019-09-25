@@ -1,14 +1,24 @@
 import React, { useState } from 'react';
 import { Button, FormGroup, Form, Label, Input } from 'reactstrap';
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function Login (){
     const useLoginForm = (cb) => {
         const [Inputs, setValues] = useState({});
     
-    const handleSubmit = (event) => {
+    const handleSubmit = (event, values, { setStatus }) => {
         if (event) {
             event.preventDefault();
+            axios
+                    .post('https://wunderlist-2-0.herokuapp.com/api/users/login', values)
+                    .then((res) => {
+                        console.log(res);
+                        setStatus(res.data)
+                    })
+                    .catch((err) => {
+                        console.log('Error:', err)
+                    })
         }
         cb();
     }
@@ -34,20 +44,24 @@ const {Inputs, handleInputChange, handleSubmit} = useLoginForm(login);
 
     return(
         <Form onSubmit={handleSubmit}>
-            <FormGroup>
+            {/* <FormGroup>
             <Label for="exampleEmail">Email Address</Label>
             <Input type="email" name="email" onChange={handleInputChange} value={Inputs.email} required />
-        </FormGroup>
-        <FormGroup>
-            <Label for="exampleEmail">Password</Label>
-            <Input type="password" name="password1" onChange={handleInputChange} value={Inputs.password1} />
-        </FormGroup>
-        <FormGroup>
-            <Button color="secondary" type="submit">Log In</Button>
-        </FormGroup>
-        <FormGroup>
-            <Link to='/signup'><Button color="secondary" type="submit">Sign Up</Button></Link>
-        </FormGroup>
+            </FormGroup> */}
+            <FormGroup>
+            <Label for="exampleEmail">Username</Label>
+            <Input type="text" name="username" onChange={handleInputChange} value={Inputs.username} required />
+            </FormGroup>
+            <FormGroup>
+                <Label for="exampleEmail">Password</Label>
+                <Input type="password" name="password1" onChange={handleInputChange} value={Inputs.password1} />
+            </FormGroup>
+            <FormGroup>
+                <Button color="secondary" type="submit">Log In</Button>
+            </FormGroup>
+            <FormGroup>
+                <Link to='/signup'><Button color="secondary" type="submit">Sign Up</Button></Link>
+            </FormGroup>
         </Form>
     )
 }

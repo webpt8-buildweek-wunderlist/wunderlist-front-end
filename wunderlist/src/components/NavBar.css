@@ -15,3 +15,11 @@
 .MenuItem{
     color: Lavender !important;
 }
+
+#SearchBar{
+    margin: auto;
+    margin-top: 5px;
+    border: 1px solid #282c34;
+    padding: 5px 50px;
+    color: #282c34;
+}
