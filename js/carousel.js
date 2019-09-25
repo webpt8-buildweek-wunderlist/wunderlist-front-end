@@ -1,9 +1,10 @@
-const track = document.querySelector('.carousel__track');
+//make your big variables
+const track = document.querySelector('.carousel__track'); // the UL class
 const slides = Array.from(track.children);
 const nextButton = document.querySelector('.carousel__button--right');
 const prevButton = document.querySelector('.carousel__button--left');
-const dotsNav = document.querySelector('.carousel__nav')
-const dots = Array.from(dotsNav.children);
+const dotsNav = document.querySelector('.carousel__nav') //contains nav direct select buttons
+const dots = Array.from(dotsNav.children); //array from the direct select buttons
 
 const slideWidth = slides[0].getBoundingClientRect().width;
 
