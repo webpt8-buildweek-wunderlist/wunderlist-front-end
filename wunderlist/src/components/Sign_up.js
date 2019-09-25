@@ -14,10 +14,19 @@ export default function SignUp (){
         
 
         //Preventing the default (page refreshing)
-        const handleSubmit = (event) => {
+        const handleSubmit = (event, values, { setStatus }) => {
             if (event) {
                 event.preventDefault();
-
+                
+                axios
+                    .post('https://wunderlist-2-0.herokuapp.com/api/users/register', values)
+                    .then((res) => {
+                        console.log(res.data)
+                        setStatus(res.data)
+                    })
+                    .catch((err) => {
+                        console.log('Error:', err)
+                    })
             }
             cb();
         }
@@ -52,6 +61,12 @@ const {Inputs, handleInputChange, handleSubmit} = useSignUpForm(signup);
             <Label for="exampleEmail">Last Name</Label> 
             <Input type="text" name="lastName" onChange={handleInputChange} value={Inputs.lastName} required />
         </FormGroup>
+
+        <FormGroup>
+            <Label for="exampleEmail">Username</Label>
+            <Input type="text" name="username" onChange={handleInputChange} value={Inputs.username} required />
+        </FormGroup>
+
         <FormGroup>
             <Label for="exampleEmail">Email Address</Label>
             <Input type="email" name="email" onChange={handleInputChange} value={Inputs.email} required />
