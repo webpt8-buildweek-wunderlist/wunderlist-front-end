@@ -15,14 +15,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <h1>Wunderlist</h1>
       <Switch>
        {/* <PrivateRoute path = "/user" component = {TheMain} /> */}
         <PrivateRoute exact path = "/user" component = {Header} />
         <PrivateRoute exact path = "/user" component = {NavBar} />
         <PrivateRoute exact path = "/user" component = {Search} />
         <Route exact path='/calendar' component={Calendar} />
-       
-       <h1>Wunderlist</h1>
        {/* <Route exact path='/' component={HomePage} /> */}
        <Route exact path='/login' component={Login} />
        <Route exact path='/signup' component={SignUp} />
