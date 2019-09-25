@@ -26,7 +26,7 @@ export default class NavBar extends Component {
             />
           </NavLink> */}
 
-          <NavLink to="/user/to_do_list">    
+          <NavLink to="/to_do_list">    
             <Menu.Item
               className = "MenuItem"
               name='to_do_list'
@@ -35,7 +35,7 @@ export default class NavBar extends Component {
             />
           </NavLink>
 
-          <NavLink to="/user/callendar">
+          <NavLink to="/callendar">
             <Menu.Item
               className = "MenuItem"
               name='calendar'
@@ -44,7 +44,7 @@ export default class NavBar extends Component {
             />
           </NavLink>
 
-          <NavLink to="/user/current_day">
+          <NavLink to="/current_day">
             <Menu.Item
               className = "MenuItem"
               name='current_day'
@@ -53,7 +53,7 @@ export default class NavBar extends Component {
             />
           </NavLink>
 
-          <NavLink to="/login">
+          <NavLink to="/">
             <Menu.Item
               className = "MenuItem"
               name='log_out'

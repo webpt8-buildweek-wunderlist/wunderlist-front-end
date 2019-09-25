@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Button, FormGroup, Form, Label, Input } from 'reactstrap';
-import { Link } from "react-router-dom";
+import {NavLink, Link } from "react-router-dom";
 import axios from "axios";
+
 
 export default function Login (){
     const useLoginForm = (cb) => {
@@ -14,6 +15,7 @@ export default function Login (){
                     .post('https://wunderlist-2-0.herokuapp.com/api/users/login', values)
                     .then((res) => {
                         console.log(res);
+                        // localStorage.getItem("token");
                         setStatus(res.data)
                     })
                     .catch((err) => {
@@ -56,9 +58,12 @@ const {Inputs, handleInputChange, handleSubmit} = useLoginForm(login);
                 <Label for="exampleEmail">Password</Label>
                 <Input type="password" name="password1" onChange={handleInputChange} value={Inputs.password1} />
             </FormGroup>
+            <NavLink to="/user">
             <FormGroup>
                 <Button color="secondary" type="submit">Log In</Button>
             </FormGroup>
+            </NavLink>
+           
             <FormGroup>
                 <Link to='/signup'><Button color="secondary" type="submit">Sign Up</Button></Link>
             </FormGroup>
