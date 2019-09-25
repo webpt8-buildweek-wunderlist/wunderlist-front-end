@@ -53,7 +53,7 @@ export default class NavBar extends Component {
             />
           </NavLink>
 
-          <NavLink to="/">
+          <NavLink to="/login">
             <Menu.Item
               className = "MenuItem"
               name='log_out'
