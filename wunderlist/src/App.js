@@ -18,7 +18,7 @@ function App() {
        <PrivateRoute path = "/user" component = {Search} />
        <h1>Wunderlist</h1>
        {/* <Route exact path='/' component={HomePage} /> */}
-       <Route exact path='/login' component={Login} />
+       <Route exact path='/' component={Login} />
        <Route exact path='/signup' component={SignUp} />
        <Route exact path='/calendar' component={Calendar} />
       </header>
