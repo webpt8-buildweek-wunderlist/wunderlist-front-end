@@ -21,7 +21,6 @@ export default function SignUp (){
                 axios
                     .post('https://wunderlist-2-0.herokuapp.com/api/users/register', values)
                     .then((res) => {
-                        console.log(res.data)
                         setStatus(res.data)
                     })
                     .catch((err) => {

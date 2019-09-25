@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as dateFns from "date-fns";
 import "./Calendar.css";
-import Header from './Header';
+// import Header from './Header';
 
 export default function Calendar (){
     //passing new Date() into useState so that when the calendar is initially rendered, the current date will be highlighted.
