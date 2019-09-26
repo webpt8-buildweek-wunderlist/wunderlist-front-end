@@ -7,7 +7,7 @@ export default function PrivateRoute(props) {
         <Route {...rest} render={() => {
             const token = localStorage.getItem('token')
             
-            return token ? <Component /> : <Redirect to="/login" />
+            return token ? <Component /> : <Redirect to="/" />
         }} />
     )
 }
