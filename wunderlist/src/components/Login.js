@@ -13,36 +13,53 @@ function Login(props) {
         const headers = {
             'Content-Type': 'application/json'
         } 
-        axios
+        // axios
+        //         .post('https://wunderlist-2-0.herokuapp.com/api/users/login', {
+        //             username: `${username}`,
+        //             password: `${password}`
+        //         }, {
+        //             headers: headers
+        //         }
+        //         )
+        //         .then((res) => {
+        //             localStorage.setItem('token', res.data.token);
+        //             localStorage.setItem('id', res.data.user.id);
+        //         })
+        //         .catch((err) => {
+        //                     console.log('Error:', err)
+        //         })
+    }
+
+    const handleSubmit =  event => {
+        // if (event) {
+            event.preventDefault();
+            console.log("Just test it");
+
+            axios
                 .post('https://wunderlist-2-0.herokuapp.com/api/users/login', {
                     username: `${username}`,
                     password: `${password}`
-                }, {
-                    headers: headers
+                // }, {
+                //     headers: headers
                 }
                 )
                 .then((res) => {
                     localStorage.setItem('token', res.data.token);
                     localStorage.setItem('id', res.data.user.id);
+                    history.push('/user');
                 })
                 .catch((err) => {
                             console.log('Error:', err)
                 })
-    }
-
-    const handleSubmit = async event => {
-        if (event) {
-            event.preventDefault();
-            console.log(props);
 
             try {
-                await axiosCall();
-                history.push('/user');
+                // await axiosCall();
+                // history.push('/user');
             } catch (e) {
                 console.log(e.message)
             }
             
-        }
+        // }
     }
 
     return(

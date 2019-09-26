@@ -6,7 +6,7 @@ import {Route, Switch} from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 // import TheMain from "./components/Main";
 import Header from "./components/Header";
-
+import CurrentDay from "./components/CurrentDay";
 import Calendar from "./components/Calendar";
 
 
@@ -22,6 +22,7 @@ function App() {
         {/* <PrivateRoute exact path = "/user/" component = {NavBar} />
         <PrivateRoute exact path = "/user/" component = {Search} /> */}
         <Route exact path='/calendar' component={Calendar} />
+        <Route exact path ="/current_day" component = {CurrentDay} />
        {/* <Route exact path='/' component={HomePage} /> */}
        <Route exact path='/' component={Login} />
        <Route exact path='/signup' component={SignUp} />
