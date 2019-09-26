@@ -711,10 +711,12 @@ footer {
   object-fit: cover;
 }
 .carousel__track-container {
-  background-color: lightGreen;
+  background: url(../img/dylan-gillis-KdeqA3aTnBY-unsplash.jpg);
   height: 100%;
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
 .carousel__track {
   padding: 0;
@@ -729,6 +731,7 @@ footer {
   top: 0;
   bottom: 0;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 .carousel__button {
   position: absolute;
@@ -779,16 +782,15 @@ footer {
   -ms-flex-direction: row;
   flex-direction: row;
   align-items: center;
-  margin: 1rem;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 0.5rem;
   border: 1px solid transparent;
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.6);
   transition: all 0.2s ease-in;
 }
 .team h2 {
   font-size: 4rem;
   font-weight: bold;
+  margin-top: 1rem;
   text-transform: uppercase;
   color: #dce2ed;
   text-shadow: -1px 1px 0 #39444e;
@@ -797,15 +799,15 @@ footer {
   .team {
     display: flex;
     flex-direction: column;
-    padding: 10%;
+    padding: 5%;
   }
   .team h2 {
     font-size: 3rem;
     font-weight: bold;
+    margin-top: 1rem;
   }
 }
 .team.clif {
-  background: url(../images/leaves.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -820,7 +822,7 @@ footer {
   background-position: center;
 }
 .team.warren {
-  background: url(../images/stone.jpg);
+  background: url(/img/face3.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -828,13 +830,13 @@ footer {
   display: flex;
   border: 3px solid #dce2ed;
   border-radius: 50%;
-  padding: 1rem;
-  max-width: 400px;
+  padding: 0.5rem;
+  max-width: 300px;
 }
 @media (max-width: 800px) {
   .teamPhoto img {
     display: block;
-    max-width: 350px;
+    max-width: 300px;
     flex-direction: column;
     margin-bottom: 10%;
   }
@@ -847,7 +849,6 @@ footer {
   background-color: #39444e;
   color: #dce2ed;
   border-radius: 10px;
-  box-shadow: -0.5rem 1rem 1rem rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 800px) {
   .teamText p {
