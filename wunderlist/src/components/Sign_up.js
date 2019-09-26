@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import axios from "axios";
+import { Link} from "react-router-dom";
 
 
 export default function SignUp (){
@@ -78,7 +79,12 @@ const {Inputs, handleInputChange, handleSubmit} = useSignUpForm(signup);
             <Label for="exampleEmail">Re-enter Password</Label>
             <Input type="password" name="password2" onChange={handleInputChange} value={Inputs.password2} />
         </FormGroup>
+        <FormGroup>
         <Button color="secondary" type="submit">Sign Up</Button>
+        </FormGroup>
+        <FormGroup>
+            <Link to='/'><Button color="secondary" type="submit">Log In</Button></Link>
+        </FormGroup>
     </Form>
     )
 }
