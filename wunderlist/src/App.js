@@ -9,11 +9,13 @@ import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import Calendar from "./components/Calendar";
 import Search from "./components/Search";
+import ToDoList from "./components/ToDoList"
 
 
 function App() {
   return (
     <div className="App">
+    {/* <ToDoList /> */}
       <header className="App-header">
        {/* <PrivateRoute path = "/user" component = {TheMain} /> */}
        <Route path = "/" component = {Header} />
@@ -25,7 +27,7 @@ function App() {
        {/* <Route exact path='/' component={HomePage} /> */}
        <Route exact path='/' component={Login} />
        <Route exact path='/signup' component={SignUp} />
-    
+       <Route path="/to_do_list" exact component={ToDoList} />
       </header>
     </div>
   );
