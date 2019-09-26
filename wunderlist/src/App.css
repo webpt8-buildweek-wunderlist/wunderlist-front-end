@@ -14,17 +14,17 @@
   align-items: center;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  color:#282c34;
+  color: #282c34;
   position: relative;
 }
 
 .App-link {
   color: #09d3ac;
 }
-.error{
+.error {
   background: rgba(238, 11, 11, 0.459);
   border-radius: 10px;
   display: flex;
   justify-content: flex-start;
-  padding: 10px
+  padding: 10px;
 }

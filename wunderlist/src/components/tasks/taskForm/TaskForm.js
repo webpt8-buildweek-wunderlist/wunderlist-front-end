@@ -1,22 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
 import { withFormik, Form, Field } from "formik";
+import styled from "styled-components"
 import * as yup from "yup"
-
+import {Button } from "reactstrap"
 
 
 
 function TaskForm(props) {
 
   return (
-    <Form>
+    <Form style={{
+      width:"500px",
+      margin:"20px",
+    }}>
     {props.errors.task && <p className="error">{props.errors.task}</p>}
 
 
       <Field type="text" 
       name="task" 
-      placeholder="What is your task?" />
+      placeholder="What is your task ?"
+      style={{
+        'margin-top':'10px',
+        padding: "15px",
+        width:"80%",
+        "font-size":"1rem",
+        "border-radius":"10px" 
+      }} />
 
-      <button type="submit">Submit</button>
+      <Button type="submit" color="primary" style={{
+        padding:"15px"
+      }} >Submit</Button>
     </Form>
   );
 }
@@ -25,10 +38,11 @@ export default withFormik({
   mapPropsToValues: values => {
     return {
       task: values.task || "",
-    };
+     };
   },
   validationSchema: yup.object().shape({
-      task: yup.string().required()
+      task: yup.string().required("Task is required"),
+
   }),
   handleSubmit: (values , formikBag) => {
     
