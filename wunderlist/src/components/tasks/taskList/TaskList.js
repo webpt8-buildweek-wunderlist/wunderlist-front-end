@@ -15,6 +15,7 @@ function TaskList({ tasks, setTasks }) {
     display: flex;
     flex-direction: column;
     margin: 20px auto;
+    background-color: Lavender;
   `;
 
   const isTaskCompleted = taskID => {
