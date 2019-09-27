@@ -30,7 +30,7 @@ console.log(tasks)
 
    return(
         <div>
-            <Header />
+            
 
                 <TaskForm tasks={tasks} setTasks={setTasks}/>
                 <TaskList tasks={tasks}  setTasks={setTasks}/>
