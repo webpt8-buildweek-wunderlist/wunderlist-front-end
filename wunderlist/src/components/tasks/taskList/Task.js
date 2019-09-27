@@ -34,7 +34,7 @@ const Li = styled.li`
 
 const DivOfBtn = styled.div`
   width: 17%;
-  background: #fff;
+  background: Lavender;
   padding: 5px;
   border-radius: 20px;
   &:hover {
