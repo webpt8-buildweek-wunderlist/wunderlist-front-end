@@ -1,0 +1,95 @@
+@import 'variables';
+
+.teamAll {
+    margin-top: 15%;
+}
+
+.team {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    //margin: 1rem;    
+    flex-direction: row;
+    align-items: center;
+    //margin: 1rem;
+    border-radius: 10px;
+    padding: .5rem;
+    border: 1px solid transparent;
+    //box-shadow: 0 1rem 1rem rgba(0, 0, 0, .6);
+    transition: all .2s ease-in;
+    h2 {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-top: 1rem;
+        text-transform: uppercase;
+        color: @white;
+        text-shadow: -1px 1px 0 @black;
+    }
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        h2 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+    }
+
+    &.clif {
+        //background: url(../img/dylan-gillis-KdeqA3aTnBY-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    &.ken {
+        background: url(../images/cobblestone.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    &.allie {
+        background: url(../images/purple.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    &.warren {
+        background: url(/img/face3.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+}
+.teamPhoto img{
+    display: flex;
+    border: 3px solid @white;
+    border-radius: 50%;
+    padding: .5rem;
+    max-width: 300px;
+    @media (max-width: 800px) {
+        display: block;
+        max-width: 300px;
+        flex-direction: column;
+        margin-bottom: 10%;
+    }
+
+}
+
+.teamText p {
+    display: flex;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: @black;
+    color: @white;
+    border-radius: 10px;
+    //box-shadow: -.5rem 1rem 1rem rgba(0, 0, 0, .5);
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}

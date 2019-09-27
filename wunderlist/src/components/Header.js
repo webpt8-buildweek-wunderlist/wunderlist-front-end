@@ -2,11 +2,23 @@ import React, {useState, useEffect} from 'react';
 import styled from "styled-components";
 import axios from "axios";
 import TodaysDay from "./TodaysDay";
+import NavBar from "./NavBar";
+import Search from "./Search";
 
 export default function Header (){
 
     const WrapperDiv = styled.div`
         width: 100%;
+        // height: 180px;
+        // background: MidnightBlue;
+        // background-color: #282c34;
+        // color: Lavender;
+        // padding-bottom: 10px;
+        // font-size: 18px;
+    `;
+
+    const WrapperDiv0 = styled.div`
+
         height: 180px;
         // background: MidnightBlue;
         background-color: #282c34;
@@ -39,6 +51,7 @@ export default function Header (){
 
     return(
         <WrapperDiv>
+        <WrapperDiv0>
             <WrapperDiv1>
                 <TodaysDay />
                 <div>
@@ -47,6 +60,9 @@ export default function Header (){
                 </div>
             </WrapperDiv1>
             <h3>Welcome to Wunderlist</h3>
+        </WrapperDiv0>
+        <NavBar />
+        <Search />
         </WrapperDiv>
     )
 }

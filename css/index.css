@@ -702,7 +702,7 @@ footer {
 .carousel {
   position: relative;
   height: 600px;
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
 }
 .carousel__image {
@@ -711,10 +711,12 @@ footer {
   object-fit: cover;
 }
 .carousel__track-container {
-  background-color: lightGreen;
+  background: url(../img/dylan-gillis-KdeqA3aTnBY-unsplash.jpg);
   height: 100%;
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
 .carousel__track {
   padding: 0;
@@ -729,6 +731,7 @@ footer {
   top: 0;
   bottom: 0;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 .carousel__button {
   position: absolute;
@@ -766,4 +769,90 @@ footer {
 }
 .is-hidden {
   display: none;
+}
+.teamAll {
+  margin-top: 15%;
+}
+.team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in;
+}
+.team h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  color: #dce2ed;
+  text-shadow: -1px 1px 0 #39444e;
+}
+@media (max-width: 800px) {
+  .team {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+  }
+  .team h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+}
+.team.clif {
+  background-size: cover;
+  background-position: center;
+}
+.team.ken {
+  background: url(../images/cobblestone.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.team.allie {
+  background: url(../images/purple.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.team.warren {
+  background: url(/img/face3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.teamPhoto img {
+  display: flex;
+  border: 3px solid #dce2ed;
+  border-radius: 50%;
+  padding: 0.5rem;
+  max-width: 300px;
+}
+@media (max-width: 800px) {
+  .teamPhoto img {
+    display: block;
+    max-width: 300px;
+    flex-direction: column;
+    margin-bottom: 10%;
+  }
+}
+.teamText p {
+  display: flex;
+  font-size: 2rem;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #39444e;
+  color: #dce2ed;
+  border-radius: 10px;
+}
+@media (max-width: 800px) {
+  .teamText p {
+    display: flex;
+    flex-direction: column;
+  }
 }

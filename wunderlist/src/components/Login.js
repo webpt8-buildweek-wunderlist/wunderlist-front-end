@@ -52,6 +52,7 @@ function Login(props) {
             <Label for="exampleEmail">Email Address</Label>
             <Input type="email" name="email" onChange={handleInputChange} value={Inputs.email} required />
             </FormGroup> */}
+
       <FormGroup>
         <Label for="exampleEmail">Username</Label>
         <Input
@@ -89,9 +90,17 @@ function Login(props) {
 
 export default withRouter(Login);
 
+
 // export default function Login (){
 //     const useLoginForm = (cb) => {
 //         const [Inputs, setValues] = useState({});
+
+
+
+// export default function Login (){
+//     const useLoginForm = (cb) => {
+//         const [Inputs, setValues] = useState({});
+    
 
 //     const handleSubmit = (event, values, { setStatus }) => {
 //         if (event) {
@@ -155,3 +164,4 @@ export default withRouter(Login);
 //         </Form>
 //     )
 // }
+
