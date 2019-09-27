@@ -9,18 +9,11 @@ export default function Header (){
 
     const WrapperDiv = styled.div`
         width: 100%;
-        // height: 180px;
-        // background: MidnightBlue;
-        // background-color: #282c34;
-        // color: Lavender;
-        // padding-bottom: 10px;
-        // font-size: 18px;
     `;
 
     const WrapperDiv0 = styled.div`
 
         height: 180px;
-        // background: MidnightBlue;
         background-color: #282c34;
         color: Lavender;
         padding-bottom: 10px;
