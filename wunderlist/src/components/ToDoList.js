@@ -1,9 +1,9 @@
 import React,{useState , useEffect} from 'react';
-import TaskForm from "./tasks/taskForm/TaskForm"
-import TaskList from "./tasks/taskList/TaskList"
-import {Route } from "react-router-dom"
-import Description from "./tasks/taskList/Description"
-
+import TaskForm from "./tasks/taskForm/TaskForm";
+import TaskList from "./tasks/taskList/TaskList";
+import {Route } from "react-router-dom";
+import Description from "./tasks/taskList/Description";
+import Header from './Header';
 
 export default function ToDoList (){
 
@@ -30,9 +30,12 @@ console.log(tasks)
 
    return(
         <div>
-            <TaskForm tasks={tasks} setTasks={setTasks}/>
-            <TaskList tasks={tasks}  setTasks={setTasks}/>
-            <Route exact path="/to_do_list/:id" redner={props => <Description {...props} tasks={tasks} />} />
-            </div>
+            <Header />
+
+                <TaskForm tasks={tasks} setTasks={setTasks}/>
+                <TaskList tasks={tasks}  setTasks={setTasks}/>
+                <Route exact path="/to_do_list/:id" redner={props => <Description {...props} tasks={tasks} />} />
+
+        </div>
     )
 }
